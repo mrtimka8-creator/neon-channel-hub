@@ -20,22 +20,22 @@ const CategoryCard = ({ category, onClick }: CategoryCardProps) => {
 
   return (
     <div className="category-card group" onClick={onClick}>
-      <div className="flex items-start justify-between mb-4">
+      <div className="flex items-start justify-between mb-5">
         <div className={`icon-container ${category.color}`}>
           <IconComponent className="w-6 h-6 text-white" />
         </div>
         <span className="badge-count">{category.channelCount}</span>
       </div>
       
-      <h3 className="text-base font-semibold text-foreground mb-1">
+      <h3 className="text-lg font-bold text-foreground mb-1 tracking-tight">
         {category.nameRu}
       </h3>
-      <p className="text-xs text-muted-foreground mb-3">
+      <p className="text-sm text-muted-foreground mb-4">
         {category.channelCount} каналов
       </p>
       
-      <div className="flex items-center text-primary text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-        Смотреть
+      <div className="flex items-center text-primary text-sm font-semibold opacity-0 group-hover:opacity-100 transition-all duration-300 translate-x-0 group-hover:translate-x-1">
+        Открыть
         <ChevronRight className="w-4 h-4 ml-1" />
       </div>
     </div>
