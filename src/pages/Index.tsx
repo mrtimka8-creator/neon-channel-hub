@@ -22,7 +22,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen pb-6">
+    <div className="min-h-screen bg-background pb-8">
       <Header onSearch={setSearchQuery} />
       
       {selectedCategory ? (

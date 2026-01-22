@@ -8,13 +8,18 @@ interface CategoryGridProps {
 
 const CategoryGrid = ({ onCategorySelect }: CategoryGridProps) => {
   return (
-    <div className="container py-6">
-      <div className="flex items-center justify-between mb-5">
-        <h2 className="text-xl font-semibold text-foreground">Категории</h2>
-        <span className="text-sm text-muted-foreground">{categories.length} разделов</span>
+    <div className="container py-8">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h2 className="text-2xl font-bold text-foreground tracking-tight">Категории</h2>
+          <p className="text-sm text-muted-foreground mt-1">Выберите интересующий раздел</p>
+        </div>
+        <span className="text-sm font-medium text-muted-foreground bg-muted/50 px-3 py-1.5 rounded-full">
+          {categories.length} разделов
+        </span>
       </div>
       
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
         {categories.map((category) => (
           <CategoryCard
             key={category.id}
